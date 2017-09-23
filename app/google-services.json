@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "837306623805",
+    "firebase_url": "https://coofde-653bf.firebaseio.com",
+    "project_id": "coofde-653bf",
+    "storage_bucket": "coofde-653bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837306623805:android:805b2594a03f0ada",
+        "android_client_info": {
+          "package_name": "com.ahmedaziz.coofde"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837306623805-71h8gfhddqfum5qrqni2tmald79ifapu.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "837306623805-vmfflvpft9gouvotiaicubfsih7l6o7c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFj-vuQSAPQKlUkWWLTLruHX39vVNOEbY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

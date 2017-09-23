@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.akhooo.coofde">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="com.ahmedaziz.coofde.Core"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value=".activity.SearchableActivity" />
+
+        <activity
+            android:name="com.ahmedaziz.coofde.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ahmedaziz.coofde.splash"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.ahmedaziz.coofde.activity.CategoryDetailsActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.ahmedaziz.coofde.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ahmedaziz.coofde.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.ahmedaziz.coofde.activity.OfferDetailsActivity"
+            android:parentActivityName="com.ahmedaziz.coofde.activity.CategoryDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ahmedaziz.coofde.activity.CategoryDetailsActivity" />
+        </activity>
+        <activity
+            android:name="com.ahmedaziz.coofde.activity.StoreDetailsActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.ahmedaziz.coofde.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ahmedaziz.coofde.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.ahmedaziz.coofde.activity.FavouritesActivity"
+            android:parentActivityName="com.ahmedaziz.coofde.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ahmedaziz.coofde.MainActivity" />
+        </activity>
+
+        <receiver android:name="com.ahmedaziz.coofde.widget.WidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget" />
+        </receiver>
+
+        <service
+            android:name="com.ahmedaziz.coofde.widget.WidgetService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <!--<provider-->
+            <!--android:name=".data.generated.CoofdeProvider"-->
+            <!--android:authorities="com.akhooo.coofde.data.CoofdeProvider"-->
+            <!--android:exported="false" />-->
+
+        <activity
+            android:name="com.ahmedaziz.coofde.activity.SearchableActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.ahmedaziz.coofde.activity.FavouritesActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ahmedaziz.coofde.activity.FavouritesActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="com.ahmedaziz.coofde.AboutUs"
+            android:parentActivityName="com.ahmedaziz.coofde.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ahmedaziz.coofde.MainActivity" />
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>
